@@ -173,12 +173,8 @@ fun excelWorkSheetParser(excelPath: String): MutableList<Speech> {
     val file = Files.newInputStream(Path(excelPath))
     val workbook = XSSFWorkbook(file)
     val sheet = workbook.getSheet(SHEET)
-    var counter = 0
     val rowIterator = sheet.rowIterator()
     while (rowIterator.hasNext()) {
-      if (counter < 2) {
-        counter++
-      }
       val speech = Speech()
       val row = rowIterator.next()
       val cellIterator = row.cellIterator()
