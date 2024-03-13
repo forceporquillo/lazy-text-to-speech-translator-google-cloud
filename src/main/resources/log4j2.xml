@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="KafkaProducerApplication" status="error">
+  <Appenders>
+    <Console name="Console">
+      <PatternLayout>
+        <Pattern>%d{yyyy-MM-dd HH:mm:ss} [%.-40t] %-5p %c - %m%n</Pattern>
+      </PatternLayout>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Root level="INFO">
+      <AppenderRef ref="Console"/>
+    </Root>
+  </Loggers>
+</Configuration>
